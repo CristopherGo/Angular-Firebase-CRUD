@@ -1,0 +1,21 @@
+<div class="col mt-5">
+    <div class="card" style="width: 18rem;">
+        <img src={{car.getImg(0)}} class="card-img-top" height="190">
+        <div class="card-body" style="background-color: rgb(239, 238, 239, 0.72);">
+          <h5 class="card-title">{{car.getBrand()}}</h5>
+          <p class="card-text">Precio - {{car.getPrice()}} <br>
+            Engine - {{car.getHp()}} <br>
+            Model - {{car.getModel()}} <br>
+            {{car.getType()}}
+            
+          </p>
+          <div class="aling-items-center"></div>
+          <a [routerLink]="['/explore', id]" class="btn btn-primary">Explore</a>
+          <a [routerLink]="['/update', id]" class="btn btn-success m-2" *ngIf="getUser()" >Update</a>
+          <a class="btn btn-danger" *ngIf="getUser()">
+            <span (click)="delete(id)">Delete</span>
+          </a>
+          
+        </div>
+      </div>
+  </div>

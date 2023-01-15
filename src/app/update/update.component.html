@@ -1,0 +1,50 @@
+<div class="container mt-3">
+
+    <div class="row justify-content-md-center">
+
+        <div class="col-8 aling-items-center">
+            <h2 class="text-center">Actualizar Vehiculo</h2>
+            <hr style="color:rgb(60, 255, 0) ;">
+            <form>
+                <div class="form-group mt-3">
+                    <label for="marca">Brand</label>
+                    <input type="text" class="form-control" id="marca" placeholder="marca" name="marca" [(ngModel)]="brand">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="Modelo">Model</label>
+                    <input type="text" class="form-control" id="modelo" placeholder="modelo" name="modelo" [(ngModel)]="model">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="cc">Price</label>
+                    <input type="text" class="form-control" id="precio" placeholder="Precio" name="precio" [(ngModel)]="price">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="Tipo">Type</label>
+                    <input type="text" class="form-control" id="tipo" placeholder="tipo" name="tipo" [(ngModel)]="type">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="potencia">Hp</label>
+                    <input type="text" class="form-control" id="potencia" placeholder="potencia" name="potencia" [(ngModel)]="hp">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="imagen">Img 1</label>
+                    <input type="text" class="form-control" placeholder="url" name="img1" [(ngModel)]="img[0]">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="imagen">Img 2</label>
+                    <input type="text" class="form-control" placeholder="url" name="img2" [(ngModel)]="img[1]">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="imagen">Img 3</label>
+                    <input type="text" class="form-control" placeholder="url" name="img3" [(ngModel)]="img[2]">
+                </div>
+
+                <button routerLink="/" type="submit" class="btn btn-primary mt-3" (click)="updateCar()">Save</button>
+            </form>
+            <hr style="color:rgb(10, 14, 236) ;">
+        </div>
+        
+    </div>
+</div>
